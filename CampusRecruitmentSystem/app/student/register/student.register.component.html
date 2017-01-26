@@ -1,0 +1,22 @@
+<div class="container">
+    <h2>Register as Company</h2>
+
+<form [formGroup]="sRegForm" (ngSubmit)=" onSignup(sRegForm.value); onCreateAccount(sRegForm.value);">
+    <div class="form-group">
+        <input type="text" class="form-control" placeholder="Student Name" [formControl]="sRegForm.controls['name']">
+    </div>
+    <div class="form-group">
+        <input type="email" class="form-control" placeholder="Email" [formControl]="sRegForm.controls['email']">
+    </div>
+    <div class="form-group">
+        <input type="password" class="form-control" placeholder="Password" [formControl]="sRegForm.controls['pwd']">
+    </div>
+    <div class="form-group">
+        <input type="text" class="form-control" placeholder="University" [formControl]="sRegForm.controls['University']">
+    </div>
+    <div class="form-group">
+        <input type="text" class="form-control" placeholder="CGPA" [formControl]="sRegForm.controls['CGPA']">
+    </div>
+    <button class="btn btn-default" type="submit">Create Account</button>
+</form>
+</div>

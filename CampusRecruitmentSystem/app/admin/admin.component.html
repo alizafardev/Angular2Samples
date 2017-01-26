@@ -1,0 +1,53 @@
+<div class="container">
+    <h1>Admin Panel</h1>
+<div class="row">
+    <div class="col-md-6">
+      <h2>Companies</h2>
+        <table class="table">
+            <tr>
+                <th>Company</th>
+                <th>Estd.</th>
+                <th>Email</th>
+            </tr>
+            <tr *ngFor="let company of companies | async">
+                <td>{{ company.cname }}</td>
+                <td>{{ company.estd }}</td>
+                <td>{{ company.email }}</td>
+            </tr>
+        </table> 
+    </div>
+    <div class="col-md-6">
+        <h2>Students</h2>  
+        <table class="table">
+            <tr>
+                <th>Name</th>
+                <th>University</th>
+                <th>CGPA</th>
+            </tr>
+            <tr *ngFor="let student of students | async">
+                <td>{{ student.name}}</td>
+                <td>{{student.University}}</td>
+                <td>{{student.CGPA}}</td>
+            </tr>
+        </table>        
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-10 col-md-offset-2">
+        <h2>Jobs</h2>
+        <table class="table">
+            <tr>
+                <th>Company</th>
+                <th>Job</th>
+                <th></th>
+            </tr>
+            <tr *ngFor="let vacancy of vacancies | async">
+                <td>{{ vacancy.cName }}</td>
+                <td>{{ vacancy.vacancy }}</td>
+                <td><button (click)="onDelete(vacancy.$key, vacancy.index)">Delete</button></td>
+            </tr>
+        </table>
+    </div>
+</div>
+</div>

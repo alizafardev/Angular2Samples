@@ -1,0 +1,16 @@
+<div class="container">
+    <h2>
+    View Jobs
+</h2>
+<table class="table">
+    <tr>
+        <th>Company</th>
+        <th>Job</th>
+    </tr>
+    <tr *ngFor="let vacancy of vacancy | async">
+        <td>{{ vacancy.cName }}</td>
+        <td>{{ vacancy.vacancy }}</td>
+        <td><button (click)="onApply()">Apply</button></td>
+    </tr>
+</table>
+</div>

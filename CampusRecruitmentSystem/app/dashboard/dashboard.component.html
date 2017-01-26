@@ -1,0 +1,23 @@
+<div class="container">
+    <h2>Welcome to the Campus</h2>
+<p>Get your DreamJob Today</p>
+
+<ul>
+    <li><a routerLink="/company-login">Company Login</a></li>
+    <li><a routerLink="/student-login">Student Login</a></li>
+    <li>
+            <h4>Admin Panel</h4>
+    <form [formGroup]="myForm" (ngSubmit)=" login(myForm.value)">
+       <div class="form-group">
+            <input type="email" class="form-control" placeholder="Email" [formControl]="myForm.controls['email']">
+       </div>
+        <div class="form-group">
+            <input type="password" class="form-control" placeholder="Password" [formControl]="myForm.controls['pswd']">
+        </div>
+        <button class="btn btn-default" type="submit">login</button>
+    </form>
+    </li>
+</ul>
+
+
+</div>
